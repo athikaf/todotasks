@@ -10,7 +10,7 @@ async function deleteTask() {
     try{
     const id = readline.question(`Enter the ID to Delete the Task:  `);
     const fileData = await readFile(path.resolve('listData', 'todo.json'))
-            let taskData = JSON.parse(fileData.toString);
+            let taskData = JSON.parse(fileData);
             let op = false;
             taskData.forEach((item,index) => {
                 if(item.id === id){

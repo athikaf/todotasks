@@ -19,7 +19,7 @@ function createUser() {
             } else {
                 let newUser = { id: uuidv4(), email: email, todo: [] };
                 userData.push(newUser);
-                return writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(data));
+                return writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(userData));
             }
         })
         .then(() => {

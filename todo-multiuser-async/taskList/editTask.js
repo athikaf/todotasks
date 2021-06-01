@@ -37,7 +37,7 @@ async function editTask() {
             if (!op) {
                 throw new Error('Invalid email ID');
             }
-        await writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(data));
+        await writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(taskData));
         console.log("Task Is edited Successfully");
         }
         catch(err) {

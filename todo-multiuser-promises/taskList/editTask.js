@@ -23,8 +23,8 @@ function editTask() {
                     todo.forEach(element => {
                         if (id === element.id) {
                             val = true;
-                            element.task = taskContent;
-                            return writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(data));
+                            element.task = taskcontent;
+                            return writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(taskData));
                         }
                     });
 

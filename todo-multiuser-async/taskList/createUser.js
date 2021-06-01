@@ -21,7 +21,7 @@ async function createUser() {
                 userData.push(newUser);
                
             }
-        await writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(data));
+        await writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(userData));
         console.log("user Is Added Successfully");
     }
 

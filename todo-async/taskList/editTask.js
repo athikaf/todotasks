@@ -13,8 +13,8 @@ async function editTask() {
     let taskcontent = readline.question(`Enter the taskcontent:  `);
     let op = false;
     const data = await readFile(path.resolve('listData', 'todo.json'))
-            let data = JSON.parse(fileData);
-            data.forEach(ele => {
+            let userData = JSON.parse(data);
+            userData.forEach(ele => {
                 if (id === ele.id){
                     ele.task = taskcontent;
                     op = true;
@@ -23,7 +23,7 @@ async function editTask() {
     if (!op) {
         throw new Error('Invalid ID');
     }
-        await writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(data));
+        await writeFile(path.resolve('listData', 'todo.json'), JSON.stringify(userData));
         console.log("Task Is edited Successfully");
     }
         catch(err){

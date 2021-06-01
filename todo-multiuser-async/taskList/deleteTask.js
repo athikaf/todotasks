@@ -14,7 +14,7 @@ async function deleteTask() {
             let op = false;
         taskData.forEach((ele) => {
             if (email === ele.email){
-                ref = true;
+                op = true;
                 let id = readline.question(`Enter the id to delete that task: `);
                 let todo = ele.todo;
                 let newlist = todo.filter(item => item.id === id);
@@ -24,7 +24,7 @@ async function deleteTask() {
                     let index = todo.findIndex(function (data){
                         return data.id === id;
                     });
-                    taskData.splice(index, 1);
+                    todo.splice(index, 1);
                 }
             }
         });
