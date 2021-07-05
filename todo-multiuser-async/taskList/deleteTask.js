@@ -25,6 +25,8 @@ async function deleteTask() {
                         return data.id === id;
                     });
                     todo.splice(index, 1);
+                    
+                    
                 }
             }
         });
